@@ -3,9 +3,7 @@ def get_book_text(filepath): # takes filepath as input then outputs the contents
         return f.read()
     
 
-def get_num_words(text):
-    num_words = text.split()
-    return len(num_words)
+from stats import get_num_words
 
 
 def main():
