@@ -1,7 +1,17 @@
+import string
+
+
 def get_num_words(text):
     num_words = text.split() 
     return len(num_words)
 
+def name_search(text):
+    split_words = text.lower().split()
+    clean_words = [word.strip(string.punctuation) for word in split_words] 
+    name_list = ["victor", "igor", "elizabeth"]
+    name_counts = {name: clean_words.count(name) for name in name_list}
+    return name_counts
+         
 
 
 def letter_count(text):
